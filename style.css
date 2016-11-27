@@ -59,10 +59,17 @@ img {
     border-left: 2px solid #fff;
     border-bottom: 2px solid #fff;
 }
+.logo {
+    top: 10px;
+    left: 50%;
+    z-index: 99;
+    position: absolute;
+}
 /*----------------------MAP----------------------*/
 #map {
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 footer {
     position: absolute;
