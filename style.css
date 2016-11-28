@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700i|Quicksand');
 
 /*----------------------UNIVESRAL STYLE----------------------*/
+
 html {
-    min-height: 100%;
+    height: 100%;
+    width: 100%;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 body {
     text-align: center;
-    background-color: #000;
+    background-color: #131315;
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 h1 {
     font-family: "Cormorant Garamond";
@@ -28,7 +35,8 @@ p {
     font-family: "Cormorant Garamond";
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
+    font-size: 20px;
+    text-align:center;
 }
 a {
     text-decoration: none;
@@ -45,7 +53,7 @@ img {
     margin: 200px;
 }
 .content {
-/*    margin: 50px;*/
+    /*    margin: 50px;*/
     height: 100%;
     top: 0;
     bottom: 0;
@@ -54,21 +62,26 @@ img {
     overflow: hidden;
     z-index: -1;
 }
-
-.outline {
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-}
-.logo {
-    top: 10px;
-    left: 50%;
+.interface {
     z-index: 99;
     position: absolute;
 }
+#logo {
+    bottom: 10px;
+    left: 50%;
+}
+#back {
+    top: 20px;
+    left: 100px;
+}
+
 /*----------------------MAP----------------------*/
+
 #map {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     position: relative;
 }
 footer {

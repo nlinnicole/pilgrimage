@@ -10,32 +10,34 @@
 <body>
     <div class="content">
         <div id="map"></div>
-        <div class="logo"><img src="images/wifi.png"></div>
+        <div class="interface" id="back"><a href="index.html"><h4>HOME</h4></a></div>
+        <div class="interface" id="logo"><img src="images/wifi.png"></div>
         <script>
-            function initMap() {
-                var cologixNorth = {
-                    lat: 45.599002,
-                    lng: -73.569594
-                };
-                var cologixSouth = {
-                    lat: 45.484048,
-                    lng: -73.759675
-                };
-                var videotron = {
-                    lat: 45.501003,
-                    lng: -73.560329
-                };
-                var hydro = {
-                    lat: 45.539789,
-                    lng: -73.642431
-                };
-                var starbucks = {
-                    lat: 45.520217,
-                    lng: -73.595936
-                };
+            var cologixNorth = {
+                lat: 45.599002,
+                lng: -73.569594
+            };
+            var cologixSouth = {
+                lat: 45.484048,
+                lng: -73.759675
+            };
+            var videotron = {
+                lat: 45.501003,
+                lng: -73.560329
+            };
+            var hydro = {
+                lat: 45.539789,
+                lng: -73.642431
+            };
+            var starbucks = {
+                lat: 45.520217,
+                lng: -73.595936
+            };
 
-                var destination = cologixNorth;
-                var testPosition = cologixSouth;
+            var destination = cologixNorth;
+            var testPosition = cologixSouth;
+
+            function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 15,
                     center: testPosition,
@@ -132,7 +134,7 @@
                         "featureType": "road",
                         "elementType": "geometry",
                         "stylers": [{
-                            "color": "#2d2d35"
+                            "color": "#4e4e5c"
                         }]
                     }, {
                         "featureType": "road",
@@ -144,13 +146,13 @@
                         "featureType": "road.arterial",
                         "elementType": "labels.text.fill",
                         "stylers": [{
-                            "color": "#757575"
+                            "color": "#4e4e5c"
                         }]
                     }, {
                         "featureType": "road.highway",
                         "elementType": "geometry",
                         "stylers": [{
-                            "color": "#2d2d35"
+                            "color": "#4e4e5c"
                         }]
                     }, {
                         "featureType": "road.highway",
@@ -209,14 +211,30 @@
                         }]
                     }]
                 });
-                var marker = new google.maps.Marker({
+                var locationMarker = new google.maps.Marker({
                     position: testPosition,
-                    map: map
+                    map: map,
+                    icon: 'images/location_marker.png'
                 });
                 var destinationMarker = new google.maps.Marker({
                     position: destination,
-                    map: map
-                })
+                    map: map,
+                    icon: 'images/destination_marker.png'
+                });
+
+                var markers = [locationMarker, destinationMarker];
+                var bounds = new google.maps.LatLngBounds();
+                for (var i = 0; i < markers.length; i++) {
+                    bounds.extend(markers[i].getPosition());
+                }
+                map.fitBounds(bounds);
+
+                var logo = document.getElementById('logo');
+                google.maps.event.addDomListener(logo, 'click', function() {
+                    destinationMarker.setPosition(hydro);
+
+                    console.log(hydro.lat);
+                });
             }
 
         </script>
