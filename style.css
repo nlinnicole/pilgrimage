@@ -9,6 +9,7 @@ html {
     margin: 0;
     padding: 0;
 }
+
 body {
     text-align: center;
     background-color: #131315;
@@ -17,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 h1 {
     font-family: "Cormorant Garamond";
     font-weight: 700;
@@ -24,34 +26,41 @@ h1 {
     color: #fff;
     font-size: 60px;
 }
+
 h4 {
     font-family: "Quicksand";
     color: #fff;
     display: inline-block;
     margin: 0px 30px 0px 30px;
 }
+
 p {
     color: #fff;
     font-family: "Cormorant Garamond";
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    text-align:center;
+    text-align: center;
 }
+
 a {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: overline;
     color: white;
 }
+
 img {
     width: 100px;
     height: 100px;
 }
+
 #enter {
     margin: 200px;
 }
+
 .content {
     /*    margin: 50px;*/
     height: 100%;
@@ -62,18 +71,27 @@ img {
     overflow: hidden;
     z-index: -1;
 }
+
 .interface {
     z-index: 99;
     position: absolute;
 }
+
 #logo {
     bottom: 10px;
     left: 50%;
 }
+
 #back {
     top: 20px;
     left: 100px;
 }
+
+.alert {
+  background-color: #131315;
+  opacity: 80%;
+}
+
 
 /*----------------------MAP----------------------*/
 
@@ -84,6 +102,7 @@ img {
     padding: 0;
     position: relative;
 }
+
 footer {
     position: absolute;
     bottom: 0;

@@ -13,21 +13,23 @@
         <div class="interface" id="back"><a href="index.html"><h4>HOME</h4></a></div>
         <div class="interface" id="logo"><img src="images/wifi.png"></div>
         <script>
+            var hydro = {
+                lat: 45.539789,
+                lng: -73.642431
+            };
             var cologixNorth = {
                 lat: 45.599002,
                 lng: -73.569594
             };
-            var cologixSouth = {
-                lat: 45.484048,
-                lng: -73.759675
-            };
+
             var videotron = {
                 lat: 45.501003,
                 lng: -73.560329
             };
-            var hydro = {
-                lat: 45.539789,
-                lng: -73.642431
+
+            var satellite = {
+                lat: 45.541658,
+                lng: -73.614472
             };
             var starbucks = {
                 lat: 45.520217,
@@ -35,12 +37,14 @@
             };
 
             var destination = cologixNorth;
-            var testPosition = cologixSouth;
+            var testPosition = videotron;
 
             function initMap() {
+                //STYLES MAP
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 15,
                     center: testPosition,
+                    gestureHandling: 'cooperative',
                     styles: [{
                         "elementType": "geometry",
                         "stylers": [{
@@ -211,17 +215,39 @@
                         }]
                     }]
                 });
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        var currentPosition = new google.maps.Marker({
+                            position: pos,
+                            map: map,
+                            icon: 'images/location_marker.png'
+                        });
+                        // console.log(pos);
+                    })
+                }
+
+                //SETS MARKERS
                 var locationMarker = new google.maps.Marker({
-                    position: testPosition,
+                    position: {
+                        lat: 45.484048,
+                        lng: -73.759675
+                    },
                     map: map,
                     icon: 'images/location_marker.png'
                 });
+
                 var destinationMarker = new google.maps.Marker({
                     position: destination,
                     map: map,
                     icon: 'images/destination_marker.png'
                 });
 
+                //FITS MAP TO SCREEN
                 var markers = [locationMarker, destinationMarker];
                 var bounds = new google.maps.LatLngBounds();
                 for (var i = 0; i < markers.length; i++) {
@@ -229,18 +255,57 @@
                 }
                 map.fitBounds(bounds);
 
-                var logo = document.getElementById('logo');
-                google.maps.event.addDomListener(logo, 'click', function() {
-                    destinationMarker.setPosition(hydro);
-
-                    console.log(hydro.lat);
+                //CIRCLE
+                var testCircle = new google.maps.Circle({
+                    strokeColor: '#A79CB7',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#A79CB7",
+                    fillOpacity: 0.35,
+                    map: map,
+                    center: cologixNorth,
+                    radius: 100
                 });
+
+                var bounds = testCircle.getBounds();
+                testCircle.bindTo('cologixNorth', destinationMarker, 'cologixNorth');
+                console.log(bounds.contains(satellite));
+
+                //LOGO CLICK EVENT
+                var logo = document.getElementById('logo');
+                var locations = [hydro, cologixNorth, videotron, satellite, starbucks];
+                var locationNames = ['hydro', 'cologix', 'videotron', 'south', 'starbucks'];
+
+                var index = 0;
+                google.maps.event.addDomListener(logo, 'click', function() {
+                    if (index < locations.length) {
+                        // if (bounds.contains(cologixSouth)){
+                        destinationMarker.setPosition(locations[index]);
+                        // } else {
+                        //   alert("not in radius!");
+                        // }
+                    } else {
+                        destinationMarker.setPosition(locations[4]);
+                    }
+                    index++;
+                });
+
+                for (var i = 0; i < locations.length; i++) {
+                    showMessage(destinationMarker, locationNames[i])
+                }
             }
 
+            function showMessage(marker, locationName) {
+                var name = new google.maps.InfoWindow({
+                    content: locationName
+                });
+
+                marker.addListener('click', function() {
+                    name.open(marker.get('map'), marker);
+                })
+            }
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBgUsLyrHQoKubT4Nvhs8jozLRqcawHJ0&callback=initMap">
-
-
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBgUsLyrHQoKubT4Nvhs8jozLRqcawHJ0&libraries=geometry&callback=initMap">
         </script>
     </div>
 </body>
