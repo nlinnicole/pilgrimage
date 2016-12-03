@@ -200,7 +200,7 @@ else if(isset($_POST['submit5']))
     <div class="content">
         <div id="map"></div>
         <div class="interface" id="back"><a href="index.html"><h4>HOME</h4></a></div>
-        <div class="interface logo" id="logo"><img src="images/nav.png"></div>
+        <div class="interface logo" id="logo"><img class = "logo" src="images/nav.png"></div>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBgUsLyrHQoKubT4Nvhs8jozLRqcawHJ0&callback=initMap"></script>
 
 
