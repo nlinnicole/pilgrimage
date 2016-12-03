@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700i|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700i|Quicksand');
+
+/*----------------------UNIVESRAL STYLE----------------------*/
+
+html {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #131315;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Bungee', cursive;
+    font-weight: 700;
+    color: #fff;
+    font-size: 60px;
+}
+
+h3 {
+    font-family: 'Bungee', cursive;
+    color: #fff;
+    font-size: 30px;
+    display: inline-block;
+    margin: 0px 30px 0px 30px;
+}
+
+h4 {
+    font-family: 'Bungee', cursive;
+    color: #fff;
+    font-size: 40px;
+    display: inline-block;
+    margin: 0px 30px 0px 30px;
+}
+
+p {
+    color: #fff;
+    font-family: 'VT323', monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#enter {
+    margin: 200px;
+}
+
+.content {
+    /*    margin: 50px;*/
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.interface {
+    z-index: 99;
+    position: absolute;
+}
+
+.logo {
+    bottom: 10px;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+}
+
+#back {
+    top: 20px;
+    left: 100px;
+}
+
+.alert {
+  background-color: #131315;
+  opacity: 80%;
+}
+
+.menu {
+    background-color: rgba(90,90,104,1);
+    position: fixed;
+    top: 2%;
+    left: 0%;
+}
+
+
+/*----------------------MAP----------------------*/
+
+#map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
