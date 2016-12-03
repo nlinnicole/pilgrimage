@@ -1,0 +1,120 @@
+.bubble {
+	background-image: url(backmotif.png);
+	background-size: 25%;
+	background-attachment: absolute;
+	background-repeat: repeat;
+	background-color: rgba(116,116,130,0.9);
+	border-radius: 20px;
+	width: 600px;
+	padding-top: 20px;
+	z-index: 100;
+	position: absolute;
+	left: calc(50% - 300px);
+	top: 10%;
+
+	display: none;
+
+}
+
+.title {
+	font-family: 'Bungee', cursive;
+	font-size: 45px;
+	margin-top: -5px;
+}
+
+.descr {
+	font-family: 'VT323', monospace;
+	font-size: 25px;
+	text-align: left;
+	color: black;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.divide {
+	width: 100px;
+	height: 5px;
+	background-color: rgba(0,0,0,1);
+	border-radius: 5px;
+	display: inline-block;
+	margin-bottom: 100px;
+}
+
+.fullLog {
+	background-color: rgba(90,90,104,1);
+	padding-top: 20px;
+	border-radius: 15px;
+	border-style: solid;
+}
+
+.log {
+	font-family: 'Bungee', cursive;
+	text-decoration: underline;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.book {
+	font-family: 'VT323', monospace;
+	font-size: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.entry {
+	background-color: rgba(116,116,130,1);
+	padding: 5px;
+	border-radius: 5px;
+	border-style: solid;
+}
+
+.outerform {
+	width: 480px;
+	text-align: center; 
+}
+
+.theform {
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.innerform {
+	text-align: right;
+}
+
+.label {
+	font-family: 'VT323', monospace;
+	font-size: 25px;
+}
+
+.submitButton {
+	background-color: rgba(180,180,194,1);
+	font-family: 'VT323', monospace;
+	font-size: 20px;
+	border-radius: 5px;
+	width: 100px;
+	height: 45px;
+	border: none;
+
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.wrap {
+	text-align: center;
+}
+
+.continueButton {
+	background-color: rgba(180,180,194,1);
+	font-family: 'VT323', monospace;
+	font-size: 30px;
+	border-radius: 5px;
+	width: 300px;
+	height: 55px;
+	border: none;
+
+	display: inline-block;
+	margin-bottom: 50px;
+}
+
+

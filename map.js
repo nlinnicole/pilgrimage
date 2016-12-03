@@ -271,8 +271,20 @@ function initMap() {
     for (var i = 0; i < locations.length; i++) {
         showMessage(destinationMarker, locationNames[i])
     }
+
     });
     }
+
+    //sets Hydro to visible and all other popups to invisible******************************************************************************************
+    $('.logo').unbind('click').bind('click',function () {
+            
+        $(".hydro").css("display", "inline");
+        $(".data").css("display", "none");
+        $(".isp").css("display", "none");
+        $(".sate").css("display", "none");
+        $(".last").css("display", "none");
+        
+    });
 }
 
 function showMessage(marker, locationName) {
