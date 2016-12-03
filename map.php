@@ -1,5 +1,5 @@
 <?php
-
+/*
 
 //open connection to the database
 class MyDB extends SQLite3
@@ -172,7 +172,7 @@ else if(isset($_POST['submit5']))
 
 }
 
-
+*/
 ?>
 
 
@@ -208,7 +208,9 @@ else if(isset($_POST['submit5']))
     </div>
 
 
+
     <!-- Popup window for Hydro -->
+    <div class= "hide">
     <div class="bubble hydro">
 
         <br \>
@@ -301,7 +303,7 @@ else if(isset($_POST['submit5']))
         </div>
 
     </div>
-
+    </div>
 
 
 
@@ -309,6 +311,7 @@ else if(isset($_POST['submit5']))
 
 
     <!-- Popup window for Data -->
+    <div class= "hide">
     <div class="bubble data">
 
         <br \>
@@ -401,6 +404,7 @@ else if(isset($_POST['submit5']))
         </div>
 
     </div>
+    </div>
 
 
 
@@ -408,6 +412,7 @@ else if(isset($_POST['submit5']))
 
 
     <!-- Popup window for ISP -->
+    <div class= "hide">
     <div class="bubble isp">
 
         <br \>
@@ -500,12 +505,14 @@ else if(isset($_POST['submit5']))
         </div>
 
     </div>
+    </div>
 
 
 
 
 
     <!-- Popup window for Satellite -->
+    <div class= "hide">
     <div class="bubble sate">
 
         <br \>
@@ -598,6 +605,7 @@ else if(isset($_POST['submit5']))
         </div>
 
     </div>
+    </div>
 
 
 
@@ -605,6 +613,7 @@ else if(isset($_POST['submit5']))
 
 
     <!-- Popup window for Last -->
+    <div class= "hide">
     <div class="bubble last">
 
         <br \>
@@ -696,6 +705,7 @@ else if(isset($_POST['submit5']))
 
         </div>
 
+    </div>
     </div>
 
 

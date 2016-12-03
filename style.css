@@ -16,6 +16,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 h1 {
@@ -51,11 +52,6 @@ a:hover {
     color: white;
 }
 
-img {
-    width: 100px;
-    height: 100px;
-}
-
 #enter {
     margin: 200px;
 }
@@ -79,6 +75,8 @@ img {
 .logo {
     bottom: 10px;
     left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
 }
 
 #back {
