@@ -186,7 +186,7 @@ else if(isset($_POST['submit5']))
     <body>
         <div class="content">
             <div id="map"></div>
-            <div class="interface" id="back"><a href="index.html"><h4>HOME</h4></a></div>
+            <div class="interface" id="back"><a href="about.html"><h4>ABOUT</h4></a></div>
             <div class="interface" id="demo">
                 <h4>demo</h4></div>
             <div class="interface logo" id="logo"><img class="logo" src="images/navigate.png"></div>
