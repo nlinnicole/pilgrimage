@@ -1,27 +1,23 @@
 var hydro = {
-    lat: 45.539789,
-    lng: -73.642431
+    lat: 45.491629,
+    lng: -73.570761
 };
-var cologixNorth = {
-    lat: 45.599002,
-    lng: -73.569594
+var data = {
+    lat: 45.497700,
+    lng: -73.571034
 };
-
 var videotron = {
     lat: 45.501003,
     lng: -73.560329
 };
-
 var satellite = {
     lat: 45.541658,
     lng: -73.614472
 };
 var starbucks = {
-    lat: 45.520217,
-    lng: -73.595936
+    lat: 45.535858,
+    lng: -73.616522
 };
-
-var destination = hydro;
 
 function initMap() {
     //STYLES MAP
@@ -206,93 +202,94 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-              var currentPosition = new google.maps.Marker({
+            var currentPosition = new google.maps.Marker({
                 position: pos,
                 map: map,
-                icon: 'images/location_marker.png'
+                icon: 'images/current_location_small.png'
             });
 
-    //SETS MARKER
-    var destinationMarker = new google.maps.Marker({
-        position: destination,
-        map: map,
-        icon: 'images/destination_marker.png'
-    });
+            //LISTS OF LOCATIONS
+            var logo = document.getElementById('logo');
+            var locations = [hydro, data, videotron, satellite, starbucks];
+            var locationPics = ['images/tower_small.png', 'images/data_small.png', 'images/isp_small.png', 'images/satelite_small.png', 'images/wifi_small.png'];
+            var popUps = ['hydro', 'data', 'isp', 'sate', 'last'];
+            var continueButtons = ['cont01', 'cont02', 'cont03', 'cont04', 'last'];
 
-    // var testMarker = new google.maps.Marker({
-    //     position: hydro,
-    //     map: map,
-    //     icon: 'images/destination_marker.png'
-    // });
+            //DEMO
+            var demoIndex = 0;
+            google.maps.event.addDomListener(demo, 'click', function() {
+                if (index < locations.length) {
+                    currentPosition.setPosition(locations[demoIndex]);
+                }
+                demoIndex++;
+            });
 
-    //FITS MAP TO SCREEN
-    var markers = [currentPosition, destinationMarker];
-    var bounds = new google.maps.LatLngBounds();
-    for (var i = 0; i < markers.length; i++) {
-        bounds.extend(markers[i].getPosition());
-    }
-    map.fitBounds(bounds);
+            //SETS MARKER
+            var destinationMarker = new google.maps.Marker({
+                position: locations[0],
+                map: map,
+                icon: locationPics[0]
+            });
 
-    //CIRCLE
-    var testCircle = new google.maps.Circle({
-        strokeColor: '#A79CB7',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: "#A79CB7",
-        fillOpacity: 0.35,
-        map: map,
-        center: destination,
-        radius: 100
-    });
+            //FITS MAP TO SCREEN
+            var markers = [currentPosition, destinationMarker];
+            var bounds = new google.maps.LatLngBounds();
+            for (var i = 0; i < markers.length; i++) {
+                bounds.extend(markers[i].getPosition());
+            }
+            map.fitBounds(bounds);
 
-    var bounds = testCircle.getBounds();
-    testCircle.bindTo('cologixNorth', destinationMarker, 'cologixNorth');
-    console.log(bounds.contains(satellite));
+            //CIRCLE
+            var testCircle = new google.maps.Circle({
+                strokeColor: '#A79CB7',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#A79CB7",
+                fillOpacity: 0.35,
+                map: map,
+                center: locations[0],
+                radius: 100
+            });
 
-    //LOGO CLICK EVENT
-    var logo = document.getElementById('logo');
-    var locations = [hydro, cologixNorth, videotron, satellite, starbucks];
-    var locationNames = ['hydro', 'cologix', 'videotron', 'south', 'starbucks'];
+            //LOGO CLICK EVENT
+            var index = 0;
+            var popIndex = 0;
+            var continueButton = document.getElementById(continueButtons[index]);
 
-    var index = 0;
-    google.maps.event.addDomListener(logo, 'click', function() {
-        if (index < locations.length) {
-            // if (bounds.contains(cologixSouth)){
-            destinationMarker.setPosition(locations[index]);
-            // } else {
-            //   alert("not in radius!");
-            // }
-        } else {
-            destinationMarker.setPosition(locations[4]);
-        }
-        index++;
-    });
+            google.maps.event.addDomListener(logo, 'click', function() {
+                if (index < locations.length) {
+                    if (testCircle.getBounds().contains(currentPosition.getPosition())) {
+                        document.getElementById(popUps[popIndex]).style.display = "inline";
+                        google.maps.event.addDomListener(continueButton, 'click', function() {
+                            document.getElementById(popUps[popIndex]).style.display = "none";
+                            continueButton = document.getElementById(continueButtons[index]);
+                            destinationMarker.setPosition(locations[index]);
+                            destinationMarker.setIcon(locationPics[index]);
+                            testCircle.setCenter(locations[index]);
+                            var markers = [currentPosition, destinationMarker];
+                            var bounds = new google.maps.LatLngBounds();
 
-    for (var i = 0; i < locations.length; i++) {
-        showMessage(destinationMarker, locationNames[i])
-    }
-
-    });
-    }
-
-    //sets Hydro to visible and all other popups to invisible******************************************************************************************
-    $('.logo').unbind('click').bind('click',function () {
-            
-        $(".hydro").css("display", "inline");
-        $(".data").css("display", "none");
-        $(".isp").css("display", "none");
-        $(".sate").css("display", "none");
-        $(".last").css("display", "none");
-        
-    });
+                            for (var i = 0; i < markers.length; i++) {
+                                bounds.extend(markers[i].getPosition());
+                            }
+                            map.fitBounds(bounds);
+                            popIndex++;
+                        });
+                    } else {
+                        alert("not in radius!");
+                    }
+                } else {
+                    document.getElementById('finish').style.display = "inline";
+                }
+                index++;
+            });
+        });
+    };
 }
-
-function showMessage(marker, locationName) {
-    var name = new google.maps.InfoWindow({
-        content: locationName
-    });
-
-    marker.addListener('click', function() {
-        name.open(marker.get('map'), marker);
-    })
-}
+// $('.logo').unbind('click').bind('click', function() {
+//     $(".hydro").css("display", "none");
+//     $(".data").css("display", "none");
+//     $(".isp").css("display", "inline");
+//     $(".sate").css("display", "none");
+//     $(".last").css("display", "none");
+// });

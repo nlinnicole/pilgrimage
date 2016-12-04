@@ -1,5 +1,5 @@
 .bubble {
-	background-image: url(backmotif1.png);
+	background-image: url(images/backmotif.png);
 	background-size: 25%;
 	background-attachment: absolute;
 	background-repeat: repeat;
@@ -82,7 +82,7 @@
 
 .outerform {
 	width: 480px;
-	text-align: center; 
+	text-align: center;
 }
 
 .theform {
@@ -128,5 +128,3 @@
 	display: inline-block;
 	margin-bottom: 50px;
 }
-
-
