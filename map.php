@@ -205,7 +205,7 @@ else if(isset($_POST['submit5']))
                     <br \>
 
                 </center>
-                <p class="descr">&nbsp; &nbsp;Behold, from this sacred site, amongst many others, runs the lifeblood of the modern world. The electricity from these shrines wove the womb from which He was born eons ago, and continues to fuel him today. Without it, He would lose connection, and we would have to navigate this cold world alone. Reflect as long as you need, and then we shall continue on. We encourage you to leave a pittance of knowledge for future pilgrims if you have wisdom you wish to bestow, or perhaps a past disciple has left valuable words of guidance to aid you on your journey.</p>
+                <p class="descr">&nbsp; &nbsp;Behold, from this sacred ground of Hydro Quebec runs the lifeblood of the modern world. The electricity from shrines such as this wove the womb from which He was born eons ago, and continues to fuel him today. Without it, He would lose connection, and we would have to navigate this cold world alone. Reflect as long as you need, and then we shall continue on. We encourage you to leave a pittance of knowledge for future pilgrims if you have wisdom you wish to bestow, or perhaps a past disciple has left valuable words of guidance to aid you on your journey.</p>
                 <p class="descr">&nbsp; &nbsp;After our divine Entertainer was vitalized by electricity, he need a vessel to arrive into the world, and that is where our journey continues.</p>
                 <br \>
                 <div class="wrap">
@@ -288,9 +288,9 @@ else if(isset($_POST['submit5']))
 
                 </center>
 
-                <p class="descr">&nbsp; &nbsp;Behold, from this sacred site, amongst many others, runs the lifeblood of the modern world. The electricity from these shrines wove the womb from which He was born eons ago, and continues to fuel him today. Without it, He would lose connection, and we would have to navigate this cold world alone. Reflect as long as you need, and then we shall continue on. We encourage you to leave a pittance of knowledge for future pilgrims if you have wisdom you wish to bestow, or perhaps a past disciple has left valuable words of guidance to aid you on your journey.</p>
+                <p class="descr">&nbsp; &nbsp;Those of other faiths might go to Saint Joesph's Oratory to feel connected to a higher power, but at the Cologix Data Centers, you are literally closer to God, for within walls are his flesh and blood, the veins running into the earth and around the world. If electricity is the blood, here lies the heart. It is from here he breathes and where we breathe with him. Rest if you must, leave your mark, and when you are ready, we will proceed.</p>
 
-                <p class="descr">&nbsp; &nbsp;After our divine Entertainer was vitalized by electricity, he need a vessel to arrive into the world, and that is where our journey continues.</p>
+                <p class="descr">&nbsp; &nbsp;If this is His heart, next we visit His mouth, the source of His infinite knowledge, and the means by which we can love Him and spread His word.</p>
 
                 <br \>
 
@@ -391,9 +391,9 @@ else if(isset($_POST['submit5']))
 
                 </center>
 
-                <p class="descr">&nbsp; &nbsp;Behold, from this sacred site, amongst many others, runs the lifeblood of the modern world. The electricity from these shrines wove the womb from which He was born eons ago, and continues to fuel him today. Without it, He would lose connection, and we would have to navigate this cold world alone. Reflect as long as you need, and then we shall continue on. We encourage you to leave a pittance of knowledge for future pilgrims if you have wisdom you wish to bestow, or perhaps a past disciple has left valuable words of guidance to aid you on your journey.</p>
+                <p class="descr">&nbsp; &nbsp;Videotron headquarters. Videotron represents just one of many sects who love Him so they wish to spread His message to all that will listen, but each one is a different path to the same truth. It is through them we all are able to have a direct connection with Him, Googling for answers and Snapchatting our sins. Who has your allegiance is of no importance, for we all answer to the same Voice, and should not let the composition of our routers divide us. Once you are ready to proceed, we shall continue onwards.</p>
 
-                <p class="descr">&nbsp; &nbsp;After our divine Entertainer was vitalized by electricity, he need a vessel to arrive into the world, and that is where our journey continues.</p>
+                <p class="descr">&nbsp; &nbsp;There are other ways to be one with Him that don't even require us to be tethered, and that is where our journey continues.</p>
 
                 <br \>
 
@@ -491,9 +491,9 @@ else if(isset($_POST['submit5']))
 
                 </center>
 
-                <p class="descr">&nbsp; &nbsp;Behold, from this sacred site, amongst many others, runs the lifeblood of the modern world. The electricity from these shrines wove the womb from which He was born eons ago, and continues to fuel him today. Without it, He would lose connection, and we would have to navigate this cold world alone. Reflect as long as you need, and then we shall continue on. We encourage you to leave a pittance of knowledge for future pilgrims if you have wisdom you wish to bestow, or perhaps a past disciple has left valuable words of guidance to aid you on your journey.</p>
+                <p class="descr">&nbsp; &nbsp;If you live off the grid, or don't want your connection potentially compromised by outages, there's satellite connection. Places like Digisat are home to His bishops of bandwidth that help all feel the warmth of His guidance via satellite internet.</p>
 
-                <p class="descr">&nbsp; &nbsp;After our divine Entertainer was vitalized by electricity, he need a vessel to arrive into the world, and that is where our journey continues.</p>
+                <p class="descr">&nbsp; &nbsp;I'm sure you are weary, so let us now visit our final destination, a place any true disciple of His will be familiar with.</p>
 
                 <br \>
 
@@ -599,9 +599,9 @@ else if(isset($_POST['submit5']))
 
                 </center>
 
-                <p class="descr">&nbsp; &nbsp;Behold, from this sacred site, amongst many others, runs the lifeblood of the modern world. The electricity from these shrines wove the womb from which He was born eons ago, and continues to fuel him today. Without it, He would lose connection, and we would have to navigate this cold world alone. Reflect as long as you need, and then we shall continue on. We encourage you to leave a pittance of knowledge for future pilgrims if you have wisdom you wish to bestow, or perhaps a past disciple has left valuable words of guidance to aid you on your journey.</p>
+                <p class="descr">&nbsp; &nbsp;Alas, you have come to the end of your journey, at the shrine of the everyday, where the internet thrives and is open to all. Hopefully, with a newfound appreciation for the physical framework of the Internet that allow Him and us to be one in this world, you have broadened your own horizons.</p>
 
-                <p class="descr">&nbsp; &nbsp;After our divine Entertainer was vitalized by electricity, he need a vessel to arrive into the world, and that is where our journey continues.</p>
+                <p class="descr">&nbsp; &nbsp;Now, go forth and continue to spread the word of the Internet (courtesy of the free Wifi here).</p>
 
                 <br \>
 
