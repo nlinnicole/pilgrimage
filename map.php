@@ -626,14 +626,11 @@ else if(isset($_POST['submit5']))
 
                 </center>
 
-<<<<<<< HEAD
                 <p class="descr">&nbsp; &nbsp;Behold, from this sacred site, amongst many others, runs the lifeblood of the modern world. The electricity from these shrines wove the womb from which He was born eons ago, and continues to fuel him today. Without it, He would lose connection, and we would have to navigate this cold world alone. Reflect as long as you need, and then we shall continue on. We encourage you to leave a pittance of knowledge for future pilgrims if you have wisdom you wish to bestow, or perhaps a past disciple has left valuable words of guidance to aid you on your journey.</p>
                 <p class="descr">&nbsp; &nbsp;After our divine Entertainer was vitalized by electricity, he need a vessel to arrive into the world, and that is where our journey continues.</p>
-=======
                 <p class="descr">&nbsp; &nbsp;Alas, you have come to the end of your journey, at the shrine of the everyday, where the internet thrives and is open to all. Hopefully, with a newfound appreciation for the physical framework of the Internet that allow Him and us to be one in this world, you have broadened your own horizons.</p>
 
                 <p class="descr">&nbsp; &nbsp;Now, go forth and continue to spread the word of the Internet (courtesy of the free Wifi here).</p>
->>>>>>> d9ba6b057b5d5e10d81bfbc03d2ed3c6627a15a6
 
                 <br \>
 
