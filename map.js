@@ -218,7 +218,7 @@ function initMap() {
             //DEMO
             var demoIndex = 0;
             google.maps.event.addDomListener(demo, 'click', function() {
-                if (index < locations.length) {
+                if (demoIndex < locations.length) {
                     currentPosition.setPosition(locations[demoIndex]);
                 }
                 demoIndex++;
@@ -251,41 +251,54 @@ function initMap() {
                 radius: 100
             });
 
+            //BEGINNING POPUP
+            var start = document.getElementById('start');
+            document.getElementById("begin").style.display = "inline";
+            google.maps.event.addDomListener(start, 'click', function() {
+                document.getElementById("begin").style.display = "none";
+            });
+
             //LOGO CLICK EVENT
             var index = 0;
             var popIndex = 0;
             var continueButton = document.getElementById(continueButtons[index]);
 
             google.maps.event.addDomListener(logo, 'click', function() {
-                if (index < locations.length) {
-                    if (testCircle.getBounds().contains(currentPosition.getPosition())) {
-                        document.getElementById(popUps[popIndex]).style.display = "inline";
-                        google.maps.event.addDomListener(continueButton, 'click', function() {
-                            document.getElementById(popUps[popIndex]).style.display = "none";
-                            continueButton = document.getElementById(continueButtons[index]);
-                            destinationMarker.setPosition(locations[index]);
-                            destinationMarker.setIcon(locationPics[index]);
-                            testCircle.setCenter(locations[index]);
-                            var markers = [currentPosition, destinationMarker];
-                            var bounds = new google.maps.LatLngBounds();
+                if (testCircle.getBounds().contains(currentPosition.getPosition())) {
+                    document.getElementById(popUps[popIndex]).style.display = "inline";
+                    index++;
 
-                            for (var i = 0; i < markers.length; i++) {
-                                bounds.extend(markers[i].getPosition());
-                            }
-                            map.fitBounds(bounds);
-                            popIndex++;
+                    google.maps.event.addDomListener(continueButton, 'click', function() {
+                        document.getElementById(popUps[popIndex]).style.display = "none";
+                        continueButton = document.getElementById(continueButtons[index]);
+                        destinationMarker.setPosition(locations[index]);
+                        destinationMarker.setIcon(locationPics[index]);
+                        testCircle.setCenter(locations[index]);
+                        var markers = [currentPosition, destinationMarker];
+                        var bounds = new google.maps.LatLngBounds();
+
+                        for (var i = 0; i < markers.length; i++) {
+                            bounds.extend(markers[i].getPosition());
+                        }
+                        map.fitBounds(bounds);
+                        popIndex++;
+
+                        var finishButton = document.getElementById('finishButton');
+                        google.maps.event.addDomListener(finishButton, 'click', function(){
+                          document.getElementById('over').style.display = "inline";
+                          console.log("last");
                         });
-                    } else {
-                        alert("not in radius!");
-                    }
+                    });
                 } else {
-                    document.getElementById('finish').style.display = "inline";
+                    document.getElementById('radius').style.display = "inline";
+                    google.maps.event.addDomListener(radiusContinue, 'click', function() {
+                        document.getElementById('radius').style.display = "none";
+                    });
                 }
-                index++;
             });
         });
-    };
-}
+    }
+};
 // $('.logo').unbind('click').bind('click', function() {
 //     $(".hydro").css("display", "none");
 //     $(".data").css("display", "none");

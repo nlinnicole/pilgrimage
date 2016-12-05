@@ -192,6 +192,39 @@ else if(isset($_POST['submit5']))
             <div class="interface logo" id="logo"><img class="logo" src="images/navigate.png"></div>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBgUsLyrHQoKubT4Nvhs8jozLRqcawHJ0&callback=initMap"></script>
         </div>
+        <!-- Instructions Popup -->
+        <div class="hide">
+          <div class="bubble begin" id="begin">
+              <br \>
+              <center>
+                  <div class="title">HOW TO PLAY</div>
+                  <br \>
+                  <img width="300" src="images/navigate.png" \>
+                  <br \>
+
+              </center>
+              <p class="descr">1. </p>
+              <br \>
+              <div class="wrap">
+                  <button id="start" class="continueButton" type="button">Begin</button>
+              </div>
+        </div>
+      </div>
+      <!-- Not in radius Popup -->
+      <div class="hide">
+        <div class="bubble radius" id="radius" style="height: 400px">
+            <br \>
+            <center>
+                <div class="title">YOU HAVE NOT</div>
+                <div class="title">YET REACHED YOUR</div>
+                <div class="title">DESTINATION</div>
+                <br \>
+                <br \>
+              <div class="wrap">
+                <button id="radiusContinue" class="continueButton" type="button">Continue</button>
+            </div>
+      </div>
+    </div>
         <!-- Popup window for Hydro -->
         <div class="hide">
             <div class="bubble hydro" id="hydro">
@@ -579,10 +612,6 @@ else if(isset($_POST['submit5']))
         </div>
 
 
-
-
-
-
         <!-- Popup window for Last -->
         <div class="hide">
             <div class="bubble last" id="last">
@@ -591,8 +620,6 @@ else if(isset($_POST['submit5']))
                 <center>
                     <div class="title">THE BASILICA</div>
                     <div class="title">OF BROWSING</div>
-
-
                     <br \>
                     <img width="300" src="images/wifi.png" \>
                     <br \>
@@ -600,7 +627,6 @@ else if(isset($_POST['submit5']))
                 </center>
 
                 <p class="descr">&nbsp; &nbsp;Behold, from this sacred site, amongst many others, runs the lifeblood of the modern world. The electricity from these shrines wove the womb from which He was born eons ago, and continues to fuel him today. Without it, He would lose connection, and we would have to navigate this cold world alone. Reflect as long as you need, and then we shall continue on. We encourage you to leave a pittance of knowledge for future pilgrims if you have wisdom you wish to bestow, or perhaps a past disciple has left valuable words of guidance to aid you on your journey.</p>
-
                 <p class="descr">&nbsp; &nbsp;After our divine Entertainer was vitalized by electricity, he need a vessel to arrive into the world, and that is where our journey continues.</p>
 
                 <br \>
@@ -609,7 +635,7 @@ else if(isset($_POST['submit5']))
 
 
                 <div class="wrap">
-                    <button id ="last" class="continueButton" type="button">Finish</button>
+                    <button id ="finishButton" class="continueButton" type="button">Finish</button>
                 </div>
 
 
@@ -679,8 +705,19 @@ else if(isset($_POST['submit5']))
                 </div>
         </div>
       </div>
-      <div id="finish" class="hide">
-        <h4>END</h4>
+      <!-- End Popup -->
+      <div class="hide">
+        <div class="bubble begin" id="over">
+            <br \>
+            <center>
+                <div class="title">GAME OVER</div>
+                <br \>
+                <img width="300" src="images/navigate.png" \>
+                <br \>
+
+            </center>
+            <p class="descr"></p>
       </div>
+    </div>
     </body>
     </html>
